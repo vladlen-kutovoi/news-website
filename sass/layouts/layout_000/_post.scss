@@ -1,0 +1,169 @@
+.post {
+  margin: 0 auto;
+  padding: 50px 15px;
+  max-width: 960px;
+  background-color: $white;
+
+  &__img {
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .article__info {
+    margin-bottom: 36px;
+  }
+
+  &__paragraph {
+    line-height: 1.5em;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.post-section {
+  .button-wrapper {
+    display: flex;
+  }
+}
+
+.post-section,
+section:has(.post):not(:last-of-type) {
+  margin-bottom: 30px;
+}
+
+.read-more-section,
+.comment-section {
+  h3 {
+    margin-bottom: 18px;
+  }
+}
+
+.read-more {
+  display: flex;
+  flex-direction: column;
+  gap: 36px 25px;
+
+  &__item {
+
+    flex: 1;
+
+    a {
+      display: flex;
+      text-decoration: none;
+    }
+
+    img {
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .img-wrapper {
+      margin-bottom: 20px;
+      aspect-ratio: 5 / 3;
+      overflow: hidden;
+    }
+
+    &:hover,
+    &:focus {
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.comment-section {
+  h4 {
+    margin-bottom: 8px;
+  }
+
+  .comment-form {
+    margin-bottom: 50px;
+
+    .button {
+      font-size: 16px;
+      border-color: $darkGray;
+    }
+  }
+}
+
+.comments {
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__header {
+    margin-bottom: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__sideinfo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  &__name {
+    margin-right: 15px;
+    font-family: 'Sora', 'Trebuchet MS', sans-serif;
+  }
+
+  &__date {
+    margin-right: 15px;
+    font-size: 12px;
+  }
+
+  &__edited {
+    font-size: 14px;
+    color: $darkGray;
+  }
+
+  &__text {
+    line-height: 1.3em;
+  }
+
+  .button-wrapper {
+    display: flex;
+  }
+}
+
+.comment-editor {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 760px;
+  padding: 16px;
+  background-color: $white;
+  box-shadow: 0 0 16px $darkBlue;
+
+  span {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3em;
+    font-family: "Sora", "Trebuchet MS", sans-serif;
+    color: $darkerBlue;
+  }
+
+  .comment-form {
+    margin: 0;
+  }
+}

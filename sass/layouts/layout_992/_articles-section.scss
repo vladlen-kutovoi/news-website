@@ -1,0 +1,8 @@
+.articles-section {
+  padding: 86px 0;
+
+  .articles {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+}

@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+p,
+span,
+div {
+  font-family: 'Inter', 'Trebuchet MS', sans-serif;
+  color: $darkBlue;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Sora', 'Trebuchet MS', sans-serif;
+  color: $darkerBlue;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  &:has(.login-section) {
+    justify-content: center;
+  }
+}
+
+.non-index-main {
+  background-color: $gray;
+
+  &_dark {
+    background-color: $darkBlue;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  &_wide {
+    max-width: 1600px;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3em;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 15px 30px;
+  border: solid 1px $darkBlue;
+  background-color: $white;
+  color: $darkBlue;
+  font-family: 'Inter', 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: $darkBlue;
+    color: $white;
+  }
+
+  &_light {
+    border-color: $white;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.7);
+      color: $darkerBlue;
+    }
+  }
+
+  &_transparent {
+    background-color: transparent;
+  }
+
+  &_edit,
+  &_delete {
+    flex-direction: row;
+    border: none;
+    font-size: 14px;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: $hoverBlue;
+      background-color: transparent;
+    }
+  }
+
+  &_edit::before,
+  &_delete::before {
+    font: var(--fa-font-solid);
+    margin-right: 12px;
+  }
+
+  &_edit::before {
+    content: '\f044';
+
+  }
+
+  &_delete::before {
+    content: '\f1f8';
+  }
+}
+
+.error {
+  text-align: center;
+  color: #be0000;
+}

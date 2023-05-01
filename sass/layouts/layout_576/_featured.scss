@@ -1,0 +1,28 @@
+.article {
+  &_featured {
+    .text-wrapper {
+      width: 100%;
+    }
+
+    .article__title {
+      margin-bottom: 18px;
+      font-size: 48px;
+    }
+
+    .article__description {
+      margin-bottom: 48px;
+      font-size: 20px;
+    }
+
+    .article__info {
+      margin-bottom: 36px;
+      font-size: 16px;
+
+      &__item {
+        &:not(:last-of-type) {
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.pannel {
+  .button-wrapper {
+    flex-direction: row;
+  }
+
+  &__infotable {
+    &__item {
+      flex-direction: row;
+      justify-content: space-between;
+
+      >* {
+        margin: 0;
+        flex: 1;
+      }
+
+      a {
+        text-align: left;
+        margin-right: 15px;
+      }
+    }
+
+    &_users {
+      span {
+        margin-right: 15px;
+      }
+
+      form {
+        &:first-of-type {
+          margin-right: 15px;
+        }
+      }
+
+      select {
+        width: 140px;
+      }
+
+      .button {
+        width: 140px;
+      }
+    }
+  }
+}

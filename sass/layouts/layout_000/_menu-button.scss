@@ -1,0 +1,99 @@
+.menu-button {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 69px;
+  height: 69px;
+  padding: 21px 17px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &__item,
+  &__item::before,
+  &__item::after {
+    height: 3px;
+    width: 35px;
+    background-color: $darkerBlue;
+    border-radius: 1px;
+  }
+
+  &__item {
+    position: relative;
+    transition: all;
+    transition-delay: 0.15s;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: -12px;
+      transition: transform 0.15s ease, top 0.15s ease 0.15s;
+
+    }
+
+    &::after {
+      bottom: -12px;
+      transition: transform 0.15s ease, bottom 0.15s ease 0.15s;
+    }
+  }
+}
+
+.header__nav_active {
+  .mobile-menu {
+    left: 0;
+  }
+
+  .menu-button__item {
+    background-color: transparent;
+    transition: all;
+    transition-delay: 0.15s;
+
+    &::before {
+      top: 0;
+      transform: rotate(45deg);
+      transition: top 0.15s ease, transform 0.15s ease 0.15s;
+    }
+
+    &::after {
+      bottom: 0;
+      transform: rotate(-45deg);
+      transition: bottom 0.15s ease, transform 0.15s ease 0.15s;
+    }
+  }
+}
+
+#index {
+  .header {
+
+    .menu-button__item,
+    .menu-button__item::before,
+    .menu-button__item::after {
+      background-color: $white;
+
+      &:hover,
+      &:focus {
+        background-color: $darkGray;
+      }
+    }
+
+    .header__nav_active {
+
+      .menu-button__item::before,
+      .menu-button__item::after {
+        background-color: $darkBlue;
+
+        &:hover,
+        &:focus {
+          background-color: $hoverBlue;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.article {
+  flex-direction: row;
+
+  .img-wrapper {
+    width: 50%;
+    margin: 0 24px 0 0;
+  }
+
+  .text-wrapper {
+    width: 50%;
+    padding: 15px 0 30px;
+  }
+
+  img {
+    position: absolute;
+    -o-object-fit: cover;
+    object-fit: cover;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+  }
+
+  &__title {
+    font-size: 24px;
+  }
+
+  &__description {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+}

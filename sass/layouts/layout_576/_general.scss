@@ -1,0 +1,18 @@
+h3 {
+  font-size: 32px;
+}
+
+.button {
+  width: 200px;
+
+  &_edit,
+  &_delete {
+    display: inline-flex;
+    padding: 15px 0;
+    width: auto;
+  }
+
+  &_edit {
+    margin-right: 36px;
+  }
+}

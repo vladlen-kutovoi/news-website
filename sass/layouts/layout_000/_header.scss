@@ -1,0 +1,152 @@
+.header {
+  width: 100%;
+  z-index: 5;
+  background-color: $white;
+  box-shadow: 0 0 5px rgba(76, 69, 95, 50);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  &__nav {
+    &_active {
+      .menu-wrapper {
+        left: 0;
+      }
+    }
+  }
+}
+
+.logo-link {
+  z-index: 3;
+  display: flex;
+  margin-right: 32px;
+  text-decoration: none;
+  color: $darkBlue;
+  transition: color 0.2s ease;
+
+  &:hover,
+  &:focus {
+    color: $hoverBlue;
+  }
+
+  i {
+    font-size: 48px;
+  }
+}
+
+.menu-wrapper {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  padding: 100px 15px 30px 15px;
+  overflow-y: auto;
+  background-color: $white;
+  transition: left 0.2s ease;
+}
+
+.main-menu {
+  margin-bottom: 45px;
+
+  &__item,
+  &__submenu__item {
+    &:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__link,
+  &__submenu__link {
+    display: flex;
+    justify-content: center;
+    font-style: normal;
+    font-size: 24px;
+    color: $darkBlue;
+    text-decoration: none;
+    transition: color 0.25s ease;
+
+    &:hover,
+    &:focus {
+      color: $hoverBlue;
+    }
+  }
+
+  &__submenu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+
+    &.active {
+      display: flex;
+    }
+
+    &__enabler {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+      }
+
+      span {
+        position: relative;
+        display: list-item;
+        width: fit-content;
+
+        &:hover,
+        &:focus {
+          color: $darkBlue;
+        }
+
+        &::after {
+          content: url('../img/shverone.svg');
+          position: absolute;
+          right: -18px;
+          bottom: 3px;
+          transition: all 0.25s ease;
+        }
+
+        &.active {
+          margin-bottom: 30px;
+
+          &::after {
+            bottom: -5px;
+            transform: rotate(-180deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+#index {
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    box-shadow: none;
+
+    .container {
+      max-width: 1600px;
+    }
+
+    .logo-link {
+      color: $white;
+
+      &:hover,
+      &:focus {
+        color: $darkGray;
+      }
+    }
+  }
+}

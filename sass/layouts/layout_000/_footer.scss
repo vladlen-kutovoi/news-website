@@ -1,0 +1,26 @@
+.footer {
+  padding: 50px 0;
+  background-color: $darkerBlue;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  a {
+    display: flex;
+    color: $white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover,
+    &:focus {
+      color: $darkGray;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.post {
+  padding: 70px 100px;
+
+  &:not(:last-child) {
+    margin-bottom: 100px;
+  }
+
+  &__img {
+    margin-bottom: 70px;
+  }
+}
